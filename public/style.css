@@ -1,0 +1,41 @@
+/* Colours and layout from our UI design: blue header and sidebar, grey inputs */
+body { margin: 0; font-family: Arial, sans-serif; }
+header { background: #8fa6ff; color: #fff; padding: 20px; font-size: 20px; display: flex; justify-content: space-between; }
+.layout { display: flex; min-height: calc(100vh - 63px); }
+nav { width: 200px; background: #8fa6ff; padding-top: 30px; }
+nav a { display: block; padding: 12px; color: #fff; text-align: center; text-decoration: none; }
+nav a.active { font-weight: bold; background: rgba(255, 255, 255, 0.25); }
+main { flex: 1; padding: 20px 40px; max-width: 1000px; }
+h1 { font-weight: normal; }
+label { display: block; font-weight: bold; margin-top: 14px; }
+input, select, textarea { font-family: inherit; width: 100%; box-sizing: border-box; padding: 9px; font-size: 15px; background: #e4e4e4; border: 1px solid #ccc; }
+button { background: #8fa6ff; color: #fff; border: 1px solid #8fa6ff; padding: 10px 22px; font-size: 15px; margin-top: 14px; cursor: pointer; }
+button.outline { background: #fff; color: #000; border-color: #555; }
+button.danger { background: #f44040; border-color: #f44040; }
+button:disabled { background: #ccc; border-color: #ccc; }
+.help { color: #555; font-size: 13px; margin: 3px 0; }
+.counter { float: right; font-weight: normal; font-size: 12px; color: #555; }
+.error { color: #c62828; font-size: 13px; }
+.ok { color: #2e7d32; }
+.alert { background: #eef2ff; border: 1px solid #8fa6ff; padding: 10px; }
+.tip { background: #f6f8ff; border: 1px dashed #8fa6ff; padding: 14px; border-radius: 6px; }
+.card { border: 1px solid #d6dcf5; border-radius: 6px; padding: 12px; margin-top: 10px; cursor: default; }
+.card.active { background: #eaf1fb; }
+.cards { display: flex; gap: 16px; }
+.cards > * { flex: 1; }
+.center-page { max-width: 500px; margin: 30px auto; padding: 0 16px; text-align: center; }
+.center-page .field { text-align: left; }
+.with-tips { display: grid; grid-template-columns: 2fr 1fr; gap: 30px; }
+.with-chats { display: grid; grid-template-columns: 200px 1fr; gap: 30px; }
+.with-chats aside .card { cursor: pointer; }
+.toolbar button { background: #eee; color: #000; border-color: #ccc; padding: 4px 10px; margin: 0; }
+.editor { border: 1px solid #ccc; min-height: 220px; padding: 10px 14px; margin-bottom: 4px; }
+table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+td { padding: 8px; border-bottom: 1px solid #ddd; }
+/* Phones and tablets */
+@media (max-width: 800px) {
+  .layout, .cards { flex-direction: column; }
+  nav { width: 100%; padding: 0; display: flex; flex-wrap: wrap; }
+  main { padding: 16px; }
+  .with-tips, .with-chats { grid-template-columns: 1fr; }
+}
